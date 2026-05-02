@@ -1,10 +1,19 @@
-# Number Guessing Game 
-This is a simple Python game where the user guesses a number between 1 and 100.
+# Quiz Game 
 
-## Features:
-- Easy & Hard mode
-- Random number generation
-- Limited attempts
+This is a Python-based quiz game built using Object-Oriented Programming (OOP).
 
-## How to run:
-python number_guessing_game.py
+## Features
+- Multiple questions
+- User input handling
+- Score tracking (if implemented)
+- Simple command-line interface
+- Easily customizable questions by editing `data.py` (no changes needed in main logic)
+
+## Files
+- main.py → Runs the quiz
+- quiz_brain.py → Handles quiz logic
+- question_model.py → Defines question structure
+- data.py → Stores question data
+
+## How to run
+python main.py
