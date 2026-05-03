@@ -1,0 +1,73 @@
+# #How to draw a circle in turtle module
+#
+# from  turtle import  Turtle,Screen
+# timmy=Turtle()
+# timmy.shape("arrow")
+#
+# # num=400
+# # while num:
+# #
+# #     timmy.forward(3)
+# #     timmy.right(1)
+# #     num -=1
+#
+#
+# # OR just use the function circle()
+# # timmy.circle(100)
+#
+# screen=Screen()
+# screen.exitonclick()
+
+
+"""V-131"""
+from random import choice
+
+# import turtle as t
+#
+# timmy=t.Turtle()
+#
+# for _ in range(15):
+#     timmy.forward(10)
+#     timmy.penup()
+#     timmy.forward(10)
+#     timmy.pendown()
+#
+
+"""v-132"""
+# #I Did This
+# from turtle import Turtle,Screen
+#
+# timmy = Turtle()
+#
+#
+# for angle in range(3,9):
+#     def fun():
+#         timmy.forward(100)
+#         b = 360 / angle
+#         timmy.right(b)
+#
+#     i =angle
+#     while i:
+#
+#         fun()
+#         i-=1
+#
+# screen =Screen()
+# screen.exitonclick()
+
+#Mam did this
+import turtle as t
+import random
+tim=t.Turtle()
+colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "wheat", "SlateGray", "SeaGreen"]
+
+def draw_shape(num_sides):
+    angle=360/num_sides
+    for _ in range (num_sides):
+        tim.forward(100)
+        tim.right(angle)
+
+
+for i in range(3,9):
+    tim.color(random.choice(colors))
+    draw_shape(i)
