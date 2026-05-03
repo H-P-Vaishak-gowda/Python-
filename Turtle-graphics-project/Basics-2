@@ -1,0 +1,38 @@
+from turtle import Turtle,Screen
+import random
+
+timmy=Turtle()
+timmy.shape("triangle")
+
+# colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "wheat", "SlateGray", "SeaGreen"]
+# directions = [0,90,180,270]
+#
+# timmy.pensize(15)
+# timmy.speed(7)                  #from 1 to 10 you can give any speed value
+#
+# for i in range(200):
+#     timmy.color(random.choice(colors))
+#     timmy.forward(25)
+#     timmy.setheading(random.choice(directions))
+#
+
+"""This is how you can generate a random colours not just inside a list using rgb color pattern"""
+def random_color():
+    r=random.randint(0,255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    z=(r,g,b)
+    return z
+screen=Screen()
+directions = [0,90,180,270]
+screen.colormode(255)
+timmy.pensize(15)
+timmy.speed(7)
+
+for _ in range (200):
+    timmy.color(random_color())
+    timmy.forward(30)
+    timmy.setheading(random.choice(directions))
+
+
+screen.exitonclick()
