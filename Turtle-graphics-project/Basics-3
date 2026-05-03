@@ -1,0 +1,34 @@
+from turtle import Turtle,Screen
+import random
+
+timmy = Turtle()
+timmy.shape("triangle")
+
+list = ["purple","skyblue","tomato4","RoyalBlue","red"]
+a=random.randint(0,len(list)-1)
+
+timmy.color(list[a])
+
+
+big = True
+num=10
+while num:
+    def square():
+
+        timmy.forward(100)
+        timmy.right(90)
+
+
+    square()
+    square()
+    square()
+    timmy.forward(100)
+    num -=1
+
+
+
+
+
+
+screen =Screen()
+screen.exitonclick()
