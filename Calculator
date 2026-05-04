@@ -1,0 +1,138 @@
+#1
+
+from art import logo
+print(logo)
+
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    return a/b
+
+
+a = int(input("Enter the value of a : "))
+proceed = True
+while proceed == True:
+
+    op = input("Enter an operator [+.-.*./] : ")
+    b = int(input("Enter the value of number  : "))
+
+
+
+    if op == "+":
+        ans1 = add(a, b)
+        print(ans1)
+        a = ans1
+
+
+    elif op == "-":
+        ans1= sub(a, b)
+        a = ans1
+        print(ans1)
+
+
+    elif op == "*":
+        ans1 = mul(a, b)
+        a = ans1
+        print(ans1)
+
+
+    elif op == "/":
+        ans1 = div(a, b)
+        a = ans1
+        print(ans1)
+    next = input("Press 'c' to continue operations with answer or 'n' to start new calculation ").lower()
+
+    if next == "n":
+        proceed = False
+        print(f" The answer  is {ans1}")
+        break
+
+#2
+import art
+
+def add(n1,n2):
+    return n1+n2
+def sub(n1,n2):
+    return n1-n2
+def mul(n1,n2):
+    return n1*n2
+def div(n1,n2):
+    return n1/n2
+
+operators ={ "+":add,"-":sub,"*":mul,"/":div}
+
+
+
+def calculator():
+    move = True
+    num1 = float(input("Enter a num1: "))
+
+    while move:
+        for symbols in operators:
+            print(symbols)
+        op = input("choose an operator: ")
+        num2 = float(input("ENter the num2 value:  "))
+
+        answer = operators[op](num1, num2)
+        print(f"The answer of {num1}{op}{num2}= {answer}")
+
+        further = input(
+            "Press 'C' to continue calculation with an existing answer or press 'N' to start new calculation and 'E' to exit.").lower()
+
+        if further == "c":
+            num1 = answer
+
+        elif further == "e":
+            break
+
+        else:
+            move =False
+            print("\n"*5)
+            calculator()
+
+calculator()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
